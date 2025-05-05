@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     var body: some View {
-        Text("An app to learn GIT")
+        Text("This is an app where you will learn about git")
     }
 }
 
