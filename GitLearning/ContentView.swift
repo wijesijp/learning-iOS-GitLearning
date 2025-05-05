@@ -11,14 +11,23 @@ struct ContentView: View {
     
     @State private var showSheet  = false
     
+    @State var showNavigation = false
+    
     var body: some View {
         NavigationStack {
             VStack {
-                NavigationLink(destination: {
-                    DetailView()
+                
+                Button(action: {
+                    showNavigation = true
                 }, label: {
                     Text("Git Learning App")
                 })
+                
+//                NavigationLink(destination: {
+//                    DetailView()
+//                }, label: {
+//                    Text("Git Learning App")
+//                })
                 
                 Button(action: {
                     showSheet = true
@@ -29,6 +38,9 @@ struct ContentView: View {
             }
             .padding()
             .sheet(isPresented: $showSheet, content: {
+                DetailView()
+            })
+            .navigationDestination(isPresented: $showNavigation, destination: {
                 DetailView()
             })
         }
