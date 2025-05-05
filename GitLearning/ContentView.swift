@@ -23,7 +23,7 @@ struct ContentView: View {
                 Button(action: {
                     showSheet = true
                 }, label: {
-                    Text("Show Sheet")
+                    Text("Show Details")
                 })
                 
             }
